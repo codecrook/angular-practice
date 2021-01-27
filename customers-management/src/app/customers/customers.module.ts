@@ -5,15 +5,12 @@ import { FormsModule } from '@angular/forms'
 import { CustomersComponent } from './customers.component';
 import { CustomersListComponent } from './customers-list/customers-list.component';
 import { FilterTextboxComponent } from './customers-list/filter-textbox.component';
-import { SharedModule } from '../shared/shared.module'
+import { SharedModule } from '../shared/shared.module';
+import { CustomersRoutingModule } from './customers-routing.module'
 
 @NgModule({
-    declarations: [
-        CustomersComponent,
-        CustomersListComponent,
-        FilterTextboxComponent
-    ],
-    imports: [CommonModule, SharedModule, FormsModule],
+    imports: [CommonModule, SharedModule, FormsModule, CustomersRoutingModule],
+    declarations: [CustomersComponent, CustomersListComponent, FilterTextboxComponent],
     exports: [CustomersComponent]
 })
 export class CustomersModule { }
