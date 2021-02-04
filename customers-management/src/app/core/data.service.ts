@@ -25,7 +25,7 @@ export class DataService {
             .pipe(
                 map(customers => {
                     let customer = customers.filter((cust: ICustomer) => cust.id === id);
-                    return (customer && customer.length) ? customer[0] : null;
+                    return customer[0];
                 }),
                 catchError(this.handleError)
             )
